@@ -1,0 +1,105 @@
+<% layout('layouts/boilerPlate') -%>
+
+<body>
+  <div class="row">
+    <div class="col-8 offset-2">
+      <h3>Create a New Listing</h3>
+      <form
+        action="/listings/new"
+        method="post"
+        novalidate
+        class="needs-validation"
+        enctype="multipart/form-data"
+      >
+        <div class="mb-2">
+          <label for="title" class="form-label">Title:</label><br />
+          <input
+            id="title"
+            name="listing[title]"
+            type="text"
+            placeholder="Enter title"
+            class="form-control"
+            required
+          />
+          <div class="valid-feedback">Looks good!</div>
+          <div class="invalid-feedback">Please provide a title.</div>
+        </div>
+
+        <div class="mb-2">
+          <label for="description" class="form-label">Description:</label><br />
+          <textarea
+            id="description"
+            name="listing[description]"
+            placeholder="Enter description"
+            class="form-control"
+            required
+          ></textarea>
+          <div class="valid-feedback">Looks good!</div>
+          <div class="invalid-feedback">Please provide a description.</div>
+        </div>
+
+        <!-- <div class="mb-2">
+          <label for="image" class="form-label">Image URL:</label><br />
+          <input
+            id="image"
+            name="listing[image]"
+            type="text"
+            placeholder="Paste image link"
+            class="form-control"
+          />
+        </div> -->
+
+        <div class="mb-2">
+          <label for="image" class="form-label">Upload Image:</label><br />
+          <input
+            id="image"
+            name="listing[image]"
+            type="file"
+            class="form-control"
+          />
+        </div>
+
+        <div class="row">
+          <div class="mb-2 col-md-4">
+            <label for="price" class="form-label">Price:</label><br />
+            <input
+              id="price"
+              name="listing[price]"
+              placeholder="Eg: 1200"
+              class="form-control"
+              required
+            />
+          </div>
+
+          <div class="mb-2 col-md-8">
+            <label for="country" class="form-label">Country:</label><br />
+            <input
+              id="country"
+              name="listing[country]"
+              type="text"
+              placeholder="Enter country"
+              class="form-control"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="mb-2">
+          <label for="location" class="form-label">Location:</label><br />
+          <input
+            id="location"
+            name="listing[location]"
+            type="text"
+            placeholder="Enter location"
+            class="form-control"
+            required
+          />
+        </div>
+
+        <br />
+        <button type="submit" class="btn btn-dark add-btn">Add Listing</button>
+      </form>
+    </div>
+  </div>
+  <br />
+</body>
