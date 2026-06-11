@@ -1,6 +1,6 @@
 {
-  "engines":{
-      "node": "22.14.0"
+  "engines": {
+    "node": "22.14.0"
   },
   "name": "livio",
   "version": "1.0.0",
@@ -13,7 +13,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "cloudinary": "^2.10.0",
+    "cloudinary": "^1.41.3",
     "connect-flash": "^0.1.1",
     "connect-mongo": "^6.0.0",
     "dotenv": "^17.4.2",
